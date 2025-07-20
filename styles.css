@@ -106,20 +106,21 @@ Footer: spans all 3 columns
 
 #taskthree .grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  /* i used repeat to create 3 equal-width columns */
+  grid-template-columns: repeat(3, 1fr);
   /*i noticed double quotes were used in the grid-template-areas,so i edited it to single quotes for it to work*/
   grid-template-areas:
-    'header header header'
-    'nav main main'
-    'footer footer footer';
+  /*i added another header and footer so the header and footer can span across all three columns*/
+    "header header header" 
+    "nav main main"
+    "footer footer footer";
   gap: 10px;
-  /* and i remoeved the text-align: center,as it is not needed to meet the same layout for the challenge*/
+  /* and i removed the text-align: center,as it is not needed for the challenge,according to the way the text was aligned in the layout image in the challenge folder on github*/
 }
 
 #taskthree header {
   grid-area: header;
-  background-color: #ffeaa7;
-  
+  background-color: #ffeaa7; 
 }
 
 #taskthree nav {
